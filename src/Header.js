@@ -1,6 +1,6 @@
 
 import logo from './img/Logo.svg';
-import Nav from './Nav'
+
 
 
 
@@ -8,10 +8,10 @@ import Nav from './Nav'
 
 function Header() {
     return (
-        <>
+        <div className='header'>
             <img src={logo} alt="Logo" />
-            <Nav />
-        </>
+
+        </div>
     )
 
 
