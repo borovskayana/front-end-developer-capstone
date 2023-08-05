@@ -1,0 +1,207 @@
+
+.main-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 5em;
+    background-color: #495E57;
+    color: white;
+    height: 25em;
+
+
+  }
+  .chicago {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 5em;
+
+    color: black;
+    height: 25em;
+
+
+  }
+  h1 {
+    color: #F4CE14;
+    font-size: 2.5em;
+  }
+  .main-info div {
+    padding: 2em 5em;
+    font-size: 20px;
+  }
+  button {
+    padding: 0.8em;
+    background-color: #F4CE14;
+    color: black;
+    font-weight: 900;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.8em;
+  }
+
+  .main-info img {
+    width: 24em;
+    height: 28em;
+    border-radius: 15px;
+    margin-top: 2em;
+    margin-left: 5em;
+
+  }
+
+  /*SPECIALS COMPONENT */
+  .specials {
+
+    margin-top: 10em;
+
+
+  }
+  .specials h2 {
+    font-size: 2.5rem;
+
+  }
+  .specials-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 8em;
+    margin-right: 8em;
+    
+
+
+  }
+  .specials-info p {
+    text-align: justify;
+  }
+.specials-general{
+    margin: 2em;
+
+    border-radius: 12px;
+    background-color: #edefee;
+
+  }
+  .specials-info img {
+    width: 100%;
+    height: 12em;
+    border-radius: 12px;
+  }
+  .specials-maininfo {
+    padding: 2em;
+
+  }
+  .price{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+  }
+  .price p {
+  color: #EE9972;
+  font-weight: 900;
+  text-align: right;
+
+  }
+  .specials-general button {
+    background-color: #edefee;
+    border: none;
+    font-weight: 900;
+  }
+  .online-menu-button {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 10em;
+    margin-right: 10em;
+
+  }
+  .online-menu-button button {
+    height: 3em;
+    width: 10em;
+    font-size: 1em;
+    margin-left: 12em;
+    margin-top: 1.8em;
+
+  }
+
+
+  /*CUSTUMERS SAY COMPONENT */
+  .testimonials-bg {
+    background-color: #fbdabb;
+    padding: 1.5em 0;
+    margin: 5em 0;
+  }
+
+  .testimonials{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    margin: 2em 8em;
+
+
+    
+
+
+  }
+.testimonials-info{
+  background-color: white;
+  padding: 2em;
+  border-radius: 12px;
+}
+  .testimonials-info p{
+
+    text-align: justify;
+
+  }
+
+  .rating{
+    height: 1.5em;
+  }
+  .users{
+    height: 6em;
+  }
+
+.user {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 8em;
+  align-items: center;
+  margin: 1em 0;
+  gap: 0.5em;
+  text-align: right;
+
+
+}
+
+
+/* CHICAGO COMPONENT */
+
+.chicago {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 10em;
+  gap: 5em;
+  text-align: justify;
+  margin-top:10em;
+  margin-bottom: 6em;
+
+}
+.chicago-img img {
+  width: 22em;
+  border-radius: 12px;
+}
+.chicago-img-A {
+  z-index: 10;
+  position: absolute;
+
+  margin-right: 0em;
+  margin-top: -2em;
+
+}
+.chicago-img-B {
+  z-index: 0;
+  position: relative;
+  margin-left: 12em;
+  margin-top: 4em;
+
+}
+.chicago p, h4 {
+
+  font-size: 20px;
+}
+
+

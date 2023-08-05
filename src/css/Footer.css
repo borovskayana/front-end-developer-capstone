@@ -1,0 +1,12 @@
+.footer img {
+    height: 15em;
+
+    padding-top: 2em;
+
+}
+.footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+    padding: 1em 8em;
+}

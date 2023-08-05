@@ -60,6 +60,6 @@ a{
   grid-area: main;
 }
 .footer {
-  background-color: brown;
+  background-color: #495E57;
   grid-area: footer;
 }

@@ -1,18 +1,14 @@
-
-
-import Header from './Header';
-import Main from './Main';
-import Footer from './Footer';
-import Nav from './Nav';
-
+import HomePage from "./pages/HomePage";
+import BookingPage from "./pages/BookingPage";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className='main_content'>
-      <Header />
-      <Nav />
-      <Main />
-      <Footer />
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/booking" element={<BookingPage />} />
+      </Routes>
     </div>
   );
 }
