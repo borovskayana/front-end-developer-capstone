@@ -1,7 +1,8 @@
 import "../css/Main.css";
-import dessert from "../img/lemondessert.jpg";
-import salad from "../img/greeksalad.jpg";
-import bruchetta from "../img/bruchetta.jpg";
+import dessert from "../img/lemondessert.svg";
+import salad from "../img/greeksalad.svg";
+import bruchetta from "../img/bruchetta.svg";
+import group from "../img/group.svg";
 
 function Specials() {
   return (
@@ -12,53 +13,47 @@ function Specials() {
       </div>
       <div className="specials-info">
         <div className="specials-general">
-          <img src={salad} />
-          <div className="specials-maininfo">
-            <div className="price">
-              <h4>Greek salad</h4>
-              <p>$12.99</p>
-            </div>
+          <img src={salad} className="specials-img" />
 
-            <p>
-              The famous greek salad of crispy lettuce, peppers, olives and our
-              Chicago style feta cheese, garnished with crunchy garlic and
-              rosemary croutons.{" "}
-            </p>
-            <button>Order a delivery</button>
-          </div>
-        </div>
+          <h6>Greek salad</h6>
+          <span>$12.99</span>
 
-        <div className="specials-general">
-          <img src={bruchetta} />
-          <div className="specials-maininfo">
-            {" "}
-            <div className="price">
-              <h4>Greek salad</h4>
-              <p>$12.99</p>
-            </div>
-            <p>
-              The famous greek salad of crispy lettuce, peppers, olives and our
-              Chicago style feta cheese, garnished with crunchy garlic and
-              rosemary croutons.{" "}
-            </p>
-            <button>Order a delivery</button>
-          </div>
+          <p>
+            The famous greek salad of crispy lettuce, peppers, olives and our
+            Chicago style feta cheese, garnished with crunchy garlic and
+            rosemary croutons.{" "}
+          </p>
+          <button>
+            Order a delivery <img src={group} className="group_img" />
+          </button>
         </div>
         <div className="specials-general">
-          <img src={dessert} className="dessert" />
-          <div className="specials-maininfo">
-            <div className="price">
-              <h4>Greek salad</h4>
-              <p>$12.99</p>
-            </div>
+          <img src={bruchetta} className="specials-img" />
 
-            <p>
-              The famous greek salad of crispy lettuce, peppers, olives and our
-              Chicago style feta cheese, garnished with crunchy garlic and
-              rosemary croutons.{" "}
-            </p>
-            <button>Order a delivery</button>
-          </div>
+          <h6>Bruchetta</h6>
+          <span>$5.99</span>
+
+          <p>
+            Our Bruschetta is made from grilled bread that has been smeared with
+            garlic and seasoned with salt and olive oil.{" "}
+          </p>
+          <button>
+            Order a delivery <img src={group} className="group_img" />
+          </button>
+        </div>
+        <div className="specials-general">
+          <img src={dessert} className="specials-img" />
+
+          <h6>Lemon Dessert</h6>
+          <span>$5.00</span>
+
+          <p>
+            This comes straight from grandma’s recipe book, every last
+            ingredient has been sourced and is as authentic as can be imagined.{" "}
+          </p>
+          <button>
+            Order a delivery <img src={group} className="group_img" />
+          </button>
         </div>
       </div>
     </div>

@@ -25,19 +25,7 @@
 .header img {
   height: 3em;
 }
-.nav {
-  grid-area: nav;
-  padding: 2vw 5vw;
-}
-.nav ul {
-  display: grid;
-  grid-template-columns: repeat(6, 10vw);
-  font-weight: 900;
-  color: black;
-  align-items: center;
 
-
-}
 li {
   list-style-type: none;
   color: black;
@@ -50,7 +38,7 @@ a:hover {
   color: #8d8176;
 }
 a{
-  color: black;
+  color: #495E57;
   align-items: center;
   display: block;
 
@@ -62,4 +50,9 @@ a{
 .footer {
   background-color: #495E57;
   grid-area: footer;
+}
+.nav {
+  grid-area: nav;
+  padding: 2vw 5vw;
+
 }
