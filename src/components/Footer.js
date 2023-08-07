@@ -20,7 +20,7 @@ function Footer() {
                 <p>E-mail</p>
             </div>
             <div>
-                <h4>Social Media Links</h4>
+                <h4>Social Media <br/>Links</h4>
                 <p>LinkedIn</p>
                 <p>Facebook</p>
                 <p>Instagram</p>

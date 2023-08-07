@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function CallToAction() {
   return (
     <div className="main-info">
-      <div>
+
         <h1>Little Lemon</h1>
         <h4>Chicago</h4>
         <p>
@@ -17,8 +17,7 @@ function CallToAction() {
             Reserve a table
           </Link>
         </button>
-      </div>
-
+ 
       <img src={food} />
     </div>
   );

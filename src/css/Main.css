@@ -1,168 +1,157 @@
-
 .main-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 5em;
-    background-color: #495E57;
-    color: white;
-    height: 25em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 10em;
 
+  background-color: #495e57;
+  color: white;
+  height: 25em;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 5em 5em 8em 5em;
+  grid-template-areas: "title call_to_action_img" "title_chicago call_to_action_img" "main_info call_to_action_img" "call_to_action call_to_action_img";
+}
+.chicago {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 5em;
 
-  }
-  .chicago {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 5em;
+  color: black;
+  height: 25em;
+}
+.main-info h1 {
+  grid-area: title;
+}
+.main-info h4 {
+  grid-area: title_chicago;
+}
+.main-info p {
+  grid-area: main_info;
+  font-size: 20px;
+}
+.main-info button {
+  grid-area: call_to_action;
+  height: 3.6em;
+  width: 10em;
+  align-self: end;
+}
+.main-info img {
+  grid-area: call_to_action_img;
+}
+h1 {
+  color: #f4ce14;
+  font-size: 2.5em;
+}
 
-    color: black;
-    height: 25em;
+button {
+  padding: 0.8em;
+  background-color: #f4ce14;
+  color: black;
+  font-weight: 900;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+}
 
+.main-info img {
+  width: 24em;
+  height: 28em;
+  border-radius: 15px;
+  margin-top: 2em;
+  margin-left: 5em;
+}
 
-  }
-  h1 {
-    color: #F4CE14;
-    font-size: 2.5em;
-  }
-  .main-info div {
-    padding: 2em 5em;
-    font-size: 20px;
-  }
-  button {
-    padding: 0.8em;
-    background-color: #F4CE14;
-    color: black;
-    font-weight: 900;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.8em;
-  }
+/*SPECIALS COMPONENT */
+.specials {
+  margin-top: 10em;
+}
+.specials h2 {
+  font-size: 2.5rem;
+}
+.specials-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 8em;
+  margin-right: 8em;
+}
+.specials-info p {
+  text-align: justify;
+}
+.specials-general {
+  margin: 2em;
 
-  .main-info img {
-    width: 24em;
-    height: 28em;
-    border-radius: 15px;
-    margin-top: 2em;
-    margin-left: 5em;
-
-  }
-
-  /*SPECIALS COMPONENT */
-  .specials {
-
-    margin-top: 10em;
-
-
-  }
-  .specials h2 {
-    font-size: 2.5rem;
-
-  }
-  .specials-info {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-left: 8em;
-    margin-right: 8em;
-    
-
-
-  }
-  .specials-info p {
-    text-align: justify;
-  }
-.specials-general{
-    margin: 2em;
-
-    border-radius: 12px;
-    background-color: #edefee;
-    display: grid;
-    padding: 0em;
+  border-radius: 12px;
+  background-color: #edefee;
+  display: grid;
+  padding: 0em;
   gap: 2em;
   grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1em auto auto;
-    grid-template-areas: "specials-img specials-img" "specials-name specials-price" "specials-info specials-info" "specials-button specials-button";
+  grid-template-rows: auto 1em auto auto;
+  grid-template-areas: "specials-img specials-img" "specials-name specials-price" "specials-info specials-info" "specials-button specials-button";
+}
+.specials-general img {
+  grid-area: specials-img;
+  width: 100%;
 
-  }
-  .specials-general img  {
-    grid-area: specials-img;
-    width: 100%;
-
-    border-radius: 12px;
-  }
-  .specials-general  h6 {
-    grid-area: specials-name;
-    font-size: 17px;
-    padding-left: 2em;
-    margin-top: 0;
-    
-
-
-  }
-  .specials-general span  {
-    grid-area: specials-price;
-    color: #EE9972;
-    font-weight: 900;
-    text-align: right;
-    padding-right: 2em;
-
-
-
-  }
-  .specials-general  p {
-    grid-area: specials-info;
-    padding: 0 2em;
-
-  }
-  .specials-general  button {
-    grid-area: specials-button;
-    background-color: #edefee;
-    border: none;
-    font-weight: 900;
-    padding-left: 2em;
-    padding-bottom: 2em;
-    font-size: 16px;
-    justify-self: start;
-
-  }
-  .specials-general  button .group_img {
+  border-radius: 12px;
+}
+.specials-general h6 {
+  grid-area: specials-name;
+  font-size: 17px;
+  padding-left: 2em;
+  margin-top: 0;
+}
+.specials-general span {
+  grid-area: specials-price;
+  color: #ee9972;
+  font-weight: 900;
+  text-align: right;
+  padding-right: 2em;
+}
+.specials-general p {
+  grid-area: specials-info;
+  padding: 0 2em;
+}
+.specials-general button {
+  grid-area: specials-button;
+  background-color: #edefee;
+  border: none;
+  font-weight: 900;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  font-size: 16px;
+  justify-self: start;
+}
+.specials-general button .group_img {
   width: 1em;
 }
-  .online-menu-button {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 10em;
-    margin-right: 10em;
+.online-menu-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 10em;
+  margin-right: 10em;
+}
+.online-menu-button button {
+  height: 3em;
+  width: 10em;
+  font-size: 1em;
+  margin-left: 12em;
+  margin-top: 1.8em;
+}
 
-  }
-  .online-menu-button button {
-    height: 3em;
-    width: 10em;
-    font-size: 1em;
-    margin-left: 12em;
-    margin-top: 1.8em;
+/*CUSTUMERS SAY COMPONENT */
+.testimonials-bg {
+  background-color: #fbdabb;
+  padding: 1.5em 0;
+  margin: 5em 0;
+}
 
-  }
-
-
-  /*CUSTUMERS SAY COMPONENT */
-  .testimonials-bg {
-    background-color: #fbdabb;
-    padding: 1.5em 0;
-    margin: 5em 0;
-  }
-
-  .testimonials{
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
-    margin: 2em 8em;
-
-
-    
-
-
-  }
-.testimonials-info{
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  margin: 2em 8em;
+}
+.testimonials-info {
   background-color: white;
 
   border-radius: 12px;
@@ -172,41 +161,30 @@
   grid-template-rows: auto auto 1fr;
   grid-template-areas: "rating rating" "user_img user_name" "info info";
 }
-  .testimonials-info p{
+.testimonials-info p {
+  text-align: justify;
+}
 
-    text-align: justify;
-
-  }
-
-  .rating{
-
-    height: 1.5em;
-    justify-self: center;
-    
-  }
-
+.rating {
+  height: 1.5em;
+  justify-self: center;
+}
 
 .users {
   grid-area: user_img;
   width: 8em;
   border-radius: 12px;
-
-
 }
 .testimonials-info h4 {
   grid-area: user_name;
   font-size: 18px;
   align-self: center;
-
-
 }
 .rating {
   grid-area: rating;
-
 }
 .testimonials-info p {
   grid-area: info;
-
 }
 
 /* CHICAGO COMPONENT */
@@ -217,9 +195,8 @@
   padding: 0 10em;
   gap: 5em;
   text-align: justify;
-  margin-top:10em;
+  margin-top: 10em;
   margin-bottom: 6em;
-
 }
 .chicago-img img {
   width: 22em;
@@ -231,118 +208,76 @@
 
   margin-right: 0em;
   margin-top: -2em;
-
 }
 .chicago-img-B {
   z-index: 0;
   position: relative;
   margin-left: 12em;
   margin-top: 4em;
-
 }
-.chicago p, h4 {
-
+.chicago p,
+h4 {
   font-size: 20px;
 }
 
 @media (max-width: 1180px) {
-
-  .main-info div {
-    padding: 0;
-
-    padding-left: 2em;
-    
-  }
   .main-info {
-    padding: 1em;
+    padding: 3em;
   }
 
- 
   .specials-info {
-  
     margin: 0;
-  
-
   }
 
   .online-menu-button {
     margin-left: 2em;
     margin-right: 6em;
-
   }
   .specials {
-
     margin-top: 10em;
-
-
   }
-  .testimonials{
-
-
+  .testimonials {
     margin: 2em 4em;
-
-
-    
-
-
   }
-  .testimonials-info{
-
+  .testimonials-info {
     padding: 1em;
-
   }
   .chicago {
- 
     padding: 0;
     gap: 1em;
-    margin:0;
+    margin: 0;
     padding-left: 2em;
     padding-right: 2em;
-  
   }
-  .testimonials-info{
-
-  
-
-
+  .testimonials-info {
     padding: 0.5em;
     gap: 1em;
     grid-template-rows: auto 1em auto;
-    
-    grid-template-areas: "rating rating rating"  "user_img user_name user_name"  "user_img info info";
+
+    grid-template-areas: "rating rating rating" "user_img user_name user_name" "user_img info info";
   }
   .users {
-
     width: 6em;
-
-  
-  
   }
-  .testimonials{
-
+  .testimonials {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1em;
     margin: 2em 1em;
     padding: 2em;
+  }
+}
+@media (max-width: 900px) {
+  .main-info {
+    height: 22em;
 
-
-    
-
+    padding: 2em;
+  }
+  .main-info button {
+    align-self: end;
 
   }
 
-
-
-}
-@media (max-width: 900px) {
-
-.main-info {
-
-  height: 20em;
-
-
-}
   .main-info img {
     width: 20em;
 
@@ -350,68 +285,43 @@
     margin: 0;
 
     border-radius: 10%;
-  margin-left: 2em;
+    margin-left: 2em;
     margin-top: 1em;
   }
-  .main-info div {
-    padding: 0;
-    font-size: 18px;
-    padding-left: 2em;
-    
-  }
-  .main-info {
-    padding: 1em;
-  }
+
   h1 {
-    color: #F4CE14;
     font-size: 2em;
   }
 
   .specials h2 {
     font-size: 2em;
-
   }
   .specials-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0;
-  
-
   }
 
   .online-menu-button {
     margin-left: 2em;
     margin-right: 6em;
-
   }
   .specials {
-
     margin-top: 6em;
-
-
   }
-  .testimonials{
-
-
+  .testimonials {
     grid-template-columns: repeat(1, 1fr);
     gap: 1em;
     margin: 2em 1em;
     padding: 2em;
-
-
-    
-
-
   }
 
   .chicago {
- 
     padding: 0;
     gap: 0;
-    margin:0;
+    margin: 0;
     padding-left: 2em;
     padding-right: 2em;
-  
   }
 
   .chicago-img img {
@@ -420,32 +330,210 @@
   }
 
   .chicago-img-B {
-
     margin-left: 8em;
-
-  
   }
-  .chicago p, h4 {
-
+  .chicago p,
+  h4 {
     font-size: 18px;
   }
 
-  .testimonials-info{
-
-  
-
-
+  .testimonials-info {
     padding: 0.5em;
     gap: 1em;
     grid-template-rows: auto 1em auto;
-    
-    grid-template-areas: "rating rating rating"  "user_img user_name user_name"  "user_img info info";
+
+    grid-template-areas: "rating rating rating" "user_img user_name user_name" "user_img info info";
   }
   .users {
-
     width: 6em;
+  }
+}
+@media (max-width: 640px) {
+  .main-info {
+    height: 28em;
+    grid-template-rows: 5em 5em 13em 5em;
+  }
 
   
-  
+}
+@media (max-width: 560px) {
+  .main-info img {
+    width: 8em;
+
+    height: 10em;
+    margin: 0;
+    margin-left: 2em;
+
+    align-self: center;
+  }
+
+  .main-info {
+    height: 23em;
+    padding: 0 2em;
+
+    grid-template-columns: auto auto;
+    grid-template-rows: 3em 3em 12em 4em;
+    grid-template-areas: "title title" "title_chicago call_to_action_img" "main_info call_to_action_img" "call_to_action call_to_action_img";
+  }
+  .main-info p {
+    font-size: 16px;
+  }
+  .main-info h1 {
+    justify-self: start;
+  }
+  .main-info button {
+    height: 2.5em;
+    width: 9em;
+    font-size: 14px;
+    align-self: center;
+  }
+  .specials-general {
+    padding: 1em 0em;
+    margin: 0em;
+    background-color: white;
+    border-top: 2px solid #edefee;
+    border-radius: 0;
+
+    gap: 0.5em;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1em 6em 1em 2em;
+    grid-template-areas: "specials-name specials-name" "specials-info specials-img" "specials-info specials-price"  "specials-button specials-button";
+  }
+  .specials-info {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 0em;
+    margin-right: 0em;
+    gap: 0em;
+  }
+  .specials-general p {
+    font-size: 14px;
+  }
+  .specials-general span {
+
+align-self: start;
+  }
+  .specials-general h6 {
+    font-size: 16px;
+    justify-self: center;
+    padding: 0;
+
+  }
+  .specials-general button {
+    background-color: white;
+    justify-self: center;
+  }
+  .specials-general img {
+    width: 6.9em;
+    padding-right: 1em;
+
+    border-radius: 0;
+    align-self: start;
+  }
+  .specials{
+    margin-top: 0;
+  }
+  .online-menu-button h2 {
+    font-size: 16.5px;
+
+  }
+  .online-menu-button button {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    width: 6.5em;
+    justify-self: end;
+
+
+  }
+  .online-menu-button{
+    padding: 1em 0.5em;
+    margin: 0;
+  }
+  .testimonials-bg {
+    background-color: #edefee;
+    margin: 0;
+  }
+
+  .testimonials p {
+    font-size: 14px;
+  }
+  .testimonials h4 {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+  .testimonials {
+    padding: 0;
+  }
+  .users {
+    width: 4em;
+  }
+  .rating {
+    height: 1em;
+    justify-self: center;
+  }
+  .chicago {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1em;
+    gap: 0em;
+    text-align: justify;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+  .chicago-img-A {
+    position: relative;
+
+    margin-right: 0em;
+    margin-top: 0em;
+  }
+  .chicago-img-B {
+    position: relative;
+    margin-left: 0em;
+    margin-top: 0em;
+  }
+  .chicago-img img {
+    width: 10em;
+    border-radius: 12px;
+  }
+  .chicago-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .chicago p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 330px) {
+  .chicago-img {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+  }
+
+  .chicago-img-B {
+   display: none;
+  }
+  .chicago-img img {
+    width: 18em;
+
+  }
+  .specials-general {
+    
+    grid-template-rows: 1em 11em 2em;
+   
+  }
+  .specials-general {
+    padding: 1em 0em;
+    margin: 0em;
+    background-color: white;
+    border-top: 2px solid #edefee;
+    border-radius: 0;
+
+    gap: 0.5em;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1em 8em 1em 2em;
+    grid-template-areas: "specials-name specials-name" "specials-info specials-img" "specials-info specials-price"  "specials-button specials-button";
   }
 }
