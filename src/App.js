@@ -1,16 +1,30 @@
-import HomePage from "./pages/HomePage";
-import BookingPage from "./pages/BookingPage";
-import { Routes, Route } from "react-router-dom";
+import {
+  Route, 
+  Routes
+} from 'react-router-dom';
 
-function App() {
+
+
+import Bookings from './components/Bookings';
+import ConfirmedBooking from './components/Bookings/ConfirmedBooking';
+import HomePage from "./pages/HomePage";
+
+const App = () => {
   return (
-    <div>
-      <Routes>
+    <>
+
+        <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/booking" element={<BookingPage />} />
-      </Routes>
-    </div>
+          <Route path='/bookings' element={<Bookings />} />
+          <Route 
+            path='/confirmedBooking' 
+            element={<ConfirmedBooking />} 
+          />
+ 
+        </Routes>
+
+    </>
   );
-}
+};
 
 export default App;
