@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../../css/BookingForm.css"
 
 const GuestsErrorMessage = () => {
   return (
@@ -7,13 +8,7 @@ const GuestsErrorMessage = () => {
     </p>
   );
 };
-const TimeErrorMessage = () => {
-  return (
-    <p className="field-error">
-  Please choose time
-    </p>
-  );
-};
+
 
 const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
 
@@ -58,15 +53,16 @@ const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} className="booking-form">
       <div className="Field"> 
-      <label> 
-             Date<sup>*</sup> 
+      <label htmlFor="booking-date" className="labelField"> 
+      Choose date<sup>*</sup> 
            </label> 
         <input
           type="date"
           id="booking-date"
           name="booking-date"
+          className="inputField"
           min={resDateValue}
           value={resDate}
           required={true}
@@ -74,13 +70,14 @@ const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
         />
       </div>
       <div className="Field"> 
-      <label> 
-             Time <sup>*</sup> 
+      <label  htmlFor="booking-time" className="labelField"> 
+      Choose time <sup>*</sup> 
            </label> 
  
         <select
           id="booking-time"
           name="booking-time"
+          className="inputField"
           value={resTime}
           required={true}
           onChange={handleTimeChange}
@@ -93,12 +90,14 @@ const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
         </select>
       </div>
       <div className="Field"> 
-           <label> 
-             Guests <sup>*</sup> 
+           <label  htmlFor="booking-guests" className="labelField"> 
+             Number of guests <sup>*</sup> 
            </label> 
             <input
      value={guests.value} 
           type="number" 
+          id="booking-guests"
+          className="inputField"
           min="1"
           max="10"
              onChange={(e) => { 
@@ -115,12 +114,13 @@ const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
          </div> 
       <div className="Field">
         
-      <label> 
+      <label  htmlFor="booking-occasion" className="labelField"> 
              Occasion 
            </label> 
         <select
           id="booking-occasion"
           name="booking-occasion"
+          className="inputField"
           value={occasion}
           required={true}
           onChange={(e) => setOccasion(e.target.value)}
@@ -129,13 +129,7 @@ const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
           <option value="Anniversary">Anniversary</option>
         </select>
       </div>
-      <button
-        className="button-primary"
-        type="submit"
-        disabled={!getIsFormValid()}
-      >
-        Make your reservation
-      </button>
+      <input className="inputSubmit" type="submit" value="Make Your reservation"  disabled={!getIsFormValid()}/>
     </form>
   );
 };

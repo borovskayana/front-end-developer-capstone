@@ -1,9 +1,12 @@
 import { useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import table from "../../img/table.svg"
+import tabletwo from "../../img/tablettwo.svg"
+import lemon from "../../img/lemon.svg"
 import { fetchAPI, submitAPI } from '../../utils/fakeAPI';
 
 import BookingForm from './BookingForm';
+import "../../css/BookingForm.css"
 
 const updateTimes = (availableTimes, date) => {
   const response = fetchAPI(new Date(date));
@@ -26,13 +29,22 @@ const Bookings = () => {
   }; 
 
   return (
-    <div className="bookings">
-      <h2>Table reservation</h2>
+    <div className="main">
+      <div className='headForm'>
+        <h2>Table reservation</h2>
+        <img src={lemon} className="lemonImg" />
+        </div>
+
       <BookingForm 
         availableTimes={availableTimes} 
         dispatchOnDateChange={dispatchOnDateChange} 
         submitData={submitData} 
+      
       />
+      <div className="bookingImg">
+      <img src={table} className="tableImg" />
+        <img src={tabletwo} className="tableImg" />
+        </div>
     </div>
   );
 };

@@ -5,8 +5,8 @@ import {
 
 
 
-import Bookings from './components/Bookings';
-import ConfirmedBooking from './components/Bookings/ConfirmedBooking';
+import BookingPage from './pages/BookingPage';
+import ConfirmationPage from './pages/ConfirmationPage';
 import HomePage from "./pages/HomePage";
 
 const App = () => {
@@ -15,10 +15,10 @@ const App = () => {
 
         <Routes>
         <Route path="/" element={<HomePage />} />
-          <Route path='/bookings' element={<Bookings />} />
+          <Route path='/bookings' element={<BookingPage />} />
           <Route 
             path='/confirmedBooking' 
-            element={<ConfirmedBooking />} 
+            element={<ConfirmationPage />} 
           />
  
         </Routes>
