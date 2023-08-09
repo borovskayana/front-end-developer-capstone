@@ -13,7 +13,7 @@ function CallToAction() {
           recipes served with a modern twist.
         </p>
         <button>
-          <Link to="/booking" role="button">
+          <Link to="/bookings" role="button">
             Reserve a table
           </Link>
         </button>

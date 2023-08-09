@@ -6,12 +6,14 @@ import Nav from '../components/Nav';
 
 
 
-function ConfirmationPage() {
+function ConfirmationPage({ resTime, resDate, guests, occasion }) {
     return (
       <div className='main_content'>
             <Header />
             <Nav />
-       <ConfirmedBooking />
+        <ConfirmedBooking resTime={resTime} resDate = {resDate} guests = {guests} occasion = {occasion}/>
+     
+
         <Footer />
       </div>
     );

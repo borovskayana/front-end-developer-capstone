@@ -1,5 +1,6 @@
 import "../css/Nav.css";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 function Nav() {
   const [isActive, setActive] = useState("false");
 
@@ -8,7 +9,6 @@ function Nav() {
   };
   return (
     <>
-      
       <div className="nav">
         <button className="humburger" onClick={handleToggle}>
           <div className={isActive ? "bar1" : "change_bar1"}></div>
@@ -18,11 +18,12 @@ function Nav() {
         <div className={isActive ? "display" : "display_block"}>
         <ul>
 
-            <li>
-              <a href="#" style={{ textDecoration: "none" }}>
+<li>
+            <Link to="/" style={{ textDecoration: "none" }}>
                 Home
-              </a>
-            </li>
+              </Link>
+              </li>
+
             <li>
               <a href="#" style={{ textDecoration: "none" }}>
                 About
@@ -34,9 +35,9 @@ function Nav() {
               </a>
             </li>
             <li>
-              <a href="#" style={{ textDecoration: "none" }}>
+              <Link to="/bookings" style={{ textDecoration: "none" }}>
                 Reservations
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#" style={{ textDecoration: "none" }}>

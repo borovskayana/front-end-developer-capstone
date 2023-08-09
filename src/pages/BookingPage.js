@@ -5,12 +5,14 @@ import Footer from '../components/Footer';
 import Nav from '../components/Nav';
 
 
-function BookingPage() {
+function BookingPage({availableTimes, dispatchOnDateChange, submitData}) {
     return (
-      <div className='main_content'>
+      <div className='main_content main_confirmation'>
             <Header />
             <Nav />
-        <Bookings />
+        <Bookings  availableTimes={availableTimes} 
+        dispatchOnDateChange={dispatchOnDateChange} 
+        submitData={submitData}/>
         <Footer />
       </div>
     );
