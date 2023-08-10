@@ -9,6 +9,7 @@ import BookingPage from './pages/BookingPage';
 import ConfirmationPage from './pages/ConfirmationPage';
 import HomePage from "./pages/HomePage";
 import { fetchAPI, submitAPI } from './utils/api';
+import "./css/mystyle.css"
 
 
 import { useReducer } from 'react';
